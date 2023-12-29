@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    
+    background: linear-gradient(to right, #4568DC , #B06AB3);
+}
+
+h1{
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 3px 3px rgb(78, 70, 70);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    position: relative;
+    background-color: inherit;
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.clip{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.clip1{
+    background: url('images/image1.jpg');
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 46% 0, 39% 100%, 0 100%);
+}
+
+.clip2{
+    background: url('images/image2.jpg');
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(19% 0, 87% 0, 64% 100%, 33% 100%);
+}
+
+.clip3{
+    background: url('images/image3.jpg');
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(82% 0, 100% 0, 100% 100%, 63% 100%);
+}
+
+.wrapper:hover .clip{
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+ 
+.wrapper .clip:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
